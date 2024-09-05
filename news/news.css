@@ -1,0 +1,85 @@
+/* বডির জন্য বেসিক স্টাইলিং */
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+}
+
+/* কন্টেইনারের জন্য স্টাইলিং */
+.main-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      /* কন্টেন্ট সেন্টার করবে */
+}
+
+/* নিউজ আইটেমের জন্য স্টাইলিং */
+.news-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+      width: calc(30% - 20px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* হোভার ইফেক্ট */
+.news-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ইমেজের জন্য স্টাইলিং */
+.news-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+}
+
+/* শিরোনামের জন্য স্টাইলিং */
+.news-item h2 {
+      font-size: 18px;
+      margin: 10px 0;
+}
+
+/* বর্ণনার জন্য স্টাইলিং */
+.news-item p {
+      font-size: 14px;
+      color: #555;
+}
+
+/* লিংকের জন্য স্টাইলিং */
+.news-item a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 10px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.3s;
+}
+
+/* লিংক হোভার ইফেক্ট */
+.news-item a:hover {
+      background: #0056b3;
+}
+
+/* মোবাইল ডিভাইসের জন্য রেসপন্সিভ ডিজাইন */
+@media (max-width: 768px) {
+      .news-item {
+            width: calc(50% - 20px);
+            /* ট্যাবলেট এবং ছোট স্ক্রীনে দুই কলাম আকারে দেখাবে */
+      }
+}
+
+@media (max-width: 480px) {
+      .news-item {
+            width: calc(100% - 20px);
+            /* মোবাইল স্ক্রীনে এক কলাম আকারে দেখাবে */
+      }
+}
